@@ -1,16 +1,3 @@
-<?php
-session_start();
-date_default_timezone_set('Asia/Kolkata');
-$fn = 'count.txt';
-
-if (!isset($_SESSION['page_visited_already']))
-{
-	$file = fopen($fn, "r+");   
-	fputs($file,file_get_contents($fn) . "\n".$_SERVER["REMOTE_ADDR"]." connected at ".date("F j, Y, g:i a"));   
-	fclose($file);   
-    $_SESSION['page_visited_already'] = "y";
-}
-?>
 <html>
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
@@ -45,7 +32,7 @@ function animateValue(id, start, end, duration) {
 </head>
 <body onload="animateValue('downCount', 3999, parseInt(document.getElementById('downCount').innerHTML), 5000);">
 <div class="hdr" style="width:100%;height:500px;background:url(header.png);">
-	<a href="download.php" target="_blank">
+	<a href="myLeader_election_software_v1.10.zip" target="_blank">
 	<span style="position:absolute;top:140px;left:270px;background:#53C506;display:inline-block;text-align:center;padding:20px 50px;border-radius:2px;cursor:pointer;">
 		<span style="font:bold 28px/1 'Meera';color:#FFF;">Download Now</span><br/>
 		<span style="font:bold 15px/0.5 'Meera';color:#FFF;opacity:0.6;">VERSION 1 .1</span>
